@@ -141,6 +141,26 @@ figure.ofi .ofm{border:0;text-transform:none}
 .abtx strong{font-weight:700}
 @media(max-width:900px){.ab{grid-template-columns:1fr 1fr}.abmark,.abtx{grid-column:1/3;grid-row:auto}.ab1,.ab2,.ab3{grid-column:auto;grid-row:auto}.ab3{grid-column:1/3}}
 
+/* Le fondateur */
+.founder{padding:90px 0;background:var(--grey)}
+.fd{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:clamp(40px,6vw,90px);align-items:center}
+.fd-ph{position:relative}
+.fd-frame{position:relative;z-index:1;aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);display:grid;place-content:center;justify-items:center;gap:14px;color:#fff;box-shadow:0 30px 60px rgba(0,30,80,.25)}
+.fd-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fd-ini{width:130px;height:130px;border-radius:50%;border:3px solid rgba(255,255,255,.85);display:grid;place-items:center;font-size:48px;font-weight:700;letter-spacing:.04em}
+.fd-note{font-size:13px;opacity:.75;text-align:center}
+.fd-br{position:absolute;left:-18px;top:-18px;width:90px;height:90px;border-top:10px solid var(--red2);border-left:10px solid var(--red2)}
+.fd-tx{display:grid;gap:10px;justify-items:start}
+.fd-kick{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red2)}
+.fd-tx h2{font-size:clamp(32px,3.4vw,48px);color:var(--navy);line-height:1.1}
+.fd-role{font-size:17px;font-weight:500;color:var(--navy2);opacity:.85}
+.fd-q{position:relative;margin:26px 0 8px;padding:0 0 0 34px;border-left:4px solid var(--red2);max-width:760px}
+.fd-q::before{content:"\201C";position:absolute;left:28px;top:-58px;font-size:120px;line-height:1;color:var(--red2);opacity:.18;font-weight:700}
+.fd-q p{font-size:clamp(18px,1.5vw,22px);line-height:1.6;font-weight:500;color:var(--navy);font-style:italic}
+.fd-bio{max-width:760px;font-size:16px}
+.fd-sign{margin-top:10px;font-size:26px;font-weight:600;color:var(--navy);font-style:italic;letter-spacing:.02em}
+@media(max-width:860px){.fd{grid-template-columns:1fr}.fd-ph{max-width:340px;margin:0 auto;width:100%}.founder{padding:60px 0}}
+
 /* Compteur : texte en contour + chiffre */
 .counter-box{background:var(--navy2);padding:24px 0 35px;overflow:hidden}
 .out{font-size:clamp(40px,6.3vw,90px);font-weight:700;line-height:1.15;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.35);white-space:nowrap}
