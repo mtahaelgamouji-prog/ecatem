@@ -2,124 +2,72 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Société · ECATEM</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La société – ECATEM</title>
+<meta name="description" content="Présentation d'ECATEM, fabricant de tentes et importateur de solutions d'ombrage au Maroc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 </head>
 <body>
-<!-- Dégradés partagés pour les visuels provisoires -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f9c95"/><stop offset=".7" stop-color="#d9ddd4"/><stop offset="1" stop-color="#bdb39e"/></linearGradient>
-    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c3ae8e"/><stop offset=".7" stop-color="#e6dbc8"/><stop offset="1" stop-color="#9b8463"/></linearGradient>
-    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb0c0"/><stop offset=".7" stop-color="#e4e2da"/><stop offset="1" stop-color="#cbbfab"/></linearGradient>
-    <linearGradient id="sky4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3e3dd"/><stop offset="1" stop-color="#aeb3ab"/></linearGradient>
-  </defs>
-</svg>
-<div class="top">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="ECATEM, accueil">
-      <svg width="46" height="46" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="var(--primary)"/><path d="M7 31 L20 9 L33 31 Z" fill="none" stroke="var(--gold)" stroke-width="2.4"/><path d="M20 9 V31 M15 31 L20 22 L25 31" fill="none" stroke="#fff" stroke-width="1.8"/></svg>
-      <span><span class="name">ECATEM</span><span class="sub">Tentes · Parasols · Pergolas · Stores</span></span>
-    </a>
-    <div class="infos">
-      <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Adresse</small><span class="todo">[Adresse], Maroc</span></div></div>
-      <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><small>Téléphone</small><span class="todo">+212 [à compléter]</span></div></div>
-      <div class="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><div><small>E-mail</small><span class="todo">contact@[domaine].ma</span></div></div>
-    </div>
+<div class="topbar"><div class="wrap"><div class="langs"><b>FR</b><span>AR</span><span>EN</span></div><div class="socials"><a href="#" aria-label="Facebook"><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a><a href="#" aria-label="Instagram"><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r=".8"/></svg></a><a href="#" aria-label="WhatsApp"><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z"/></svg></a></div></div></div>
+<header class="head"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="ECATEM, accueil"><svg viewBox="0 0 64 44" aria-hidden="true"><path d="M2 40 L22 8 L32 22 L42 4 L62 40 Z" fill="none" stroke="#044799" stroke-width="3.2" stroke-linejoin="round"/><path d="M22 8 V40 M42 4 V40" stroke="#e8833a" stroke-width="2.4"/></svg><span><b>ECATEM</b><small>Tentes · Parasols · Pergolas · Stores</small></span></a>
+  <div class="hinfo">
+    <div class="hi"><span class="circ"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Adresse</small><span>[Adresse], Maroc</span></div></div>
+    <div class="hi"><span class="circ"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Appelez-nous</small><span>+212 [à compléter]</span></div></div>
+    <div class="hi"><span class="circ"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>Écrivez-nous</small><span>contact@[domaine].ma</span></div></div>
   </div>
-</div>
-<nav class="menu" aria-label="Navigation principale">
-  <div class="wrap">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="societe.html" class="on" aria-current="page">Société</a></li>
-      <li><a href="produits.html">Produits</a></li>
-      <li><a href="materiaux.html">Matériaux</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <span class="lang">FR · العربية</span>
-  </div>
-</nav>
+</div></header>
+<nav class="nav" aria-label="Navigation principale"><div class="wrap"><ul><li><a href="index.html">Accueil</a></li><li><a href="societe.html" class="on" aria-current="page">Société</a></li><li><a href="produits.html">Produits</a></li><li><a href="materiaux.html">Matériaux</a></li><li><a href="realisations.html">Réalisations</a></li></ul><a class="navcta" href="contact.html">Contact</a></div></nav>
 <main>
-<section class="pagehead"><div class="wrap"><p class="crumb"><a href="index.html">Accueil</a> / La société</p><h1>La société</h1><p>Fabricant marocain de tentes sur mesure et importateur de parasols, pergolas et stores.</p></div></section>
-  <section class="intro" aria-label="Introduction">
-    <div class="wrap">
-      <h2>Fabricant de tentes et importateur de solutions d'ombrage</h2>
-      <div>
-        <p>ECATEM conçoit et fabrique dans son atelier des tentes de réception, de campagne, sanitaires et des hangars, pour les entreprises, les organisateurs d'événements, les collectivités et les particuliers. L'entreprise importe et installe également des parasols, des pergolas, des stores et des voiles d'ombrage.</p>
-        <div class="pills"><span>Fabrication sur mesure</span><span>Toiles PVC et coton</span><span>Structures acier et aluminium</span><span>Livraison et montage au Maroc</span></div>
-      </div>
-    </div>
-  </section>
-  <section id="societe" class="company">
-    <div class="wrap co-grid">
-      <div class="co-imgs" aria-hidden="true">
-        <div class="ph"><svg viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice"><rect width="300" height="420" fill="#d8d6cf"/><rect y="290" width="300" height="130" fill="#9d978a"/><rect x="30" y="220" width="240" height="70" fill="#5b625e"/><rect x="45" y="205" width="210" height="16" fill="#f3f1ec"/><g stroke="#2c3b36" stroke-width="5"><path d="M60 80 V220 M240 80 V220 M50 80 H250"/></g></svg><span class="cap">Atelier</span></div>
-        <div class="ph"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><rect width="300" height="200" fill="url(#sky2)"/><rect y="150" width="300" height="50" fill="#a38c6c"/><path d="M60 152 L150 50 L240 152 Z" fill="#6c6a52"/></svg><span class="cap">Terrain</span></div>
-        <div class="ph"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><rect width="300" height="200" fill="url(#sky4)"/><rect y="150" width="300" height="50" fill="#8f8a7d"/><path d="M40 152 V100 L150 55 L260 100 V152 Z" fill="#f6f4ef"/></svg><span class="cap">Montage</span></div>
-      </div>
-      <div class="co-txt">
-        <span class="k">La société</span>
-        <h2>ECATEM</h2>
-        <p>ECATEM est une société marocaine qui fabrique des tentes sur mesure et importe des parasols, des pergolas et des stores.</p>
-        <p>Notre équipe met son expérience au service de chaque client, avec des produits durables, livrés dans les délais et installés par nos soins.</p>
-        <div class="counters">
-          <div><strong class="todo" style="color:var(--gold)">[nb]</strong><span>Années d'expérience</span></div>
-          <div><strong class="todo" style="color:var(--gold)">[nb]</strong><span>Projets réalisés</span></div>
-          <div><strong class="todo" style="color:var(--gold)">[nb]</strong><span>Tentes livrées</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="services">
-    <div class="wrap">
-      <div class="title">
-        <h2>Nos services</h2>
-        <p>Nous accompagnons chaque client de l'étude du besoin jusqu'à l'installation sur site.</p>
-      </div>
-      <div class="services">
-        <div class="svc"><span class="n">01</span><h3>Conception</h3><p>Étude du cahier des charges, choix des matériaux, plans et prototype si nécessaire.</p></div>
-        <div class="svc"><span class="n">02</span><h3>Fabrication</h3><p>Découpe, confection et soudure des toiles dans notre atelier, avec contrôle de chaque pièce.</p></div>
-        <div class="svc"><span class="n">03</span><h3>Livraison et montage</h3><p>Transport, montage par nos équipes partout au Maroc, et service après-vente.</p></div>
-      </div>
-    </div>
-  </section>
-  <section id="certificats">
-    <div class="wrap">
-      <div class="title">
-        <h2>Qualité et garanties</h2>
-        <p>Nos certificats et fiches techniques sont transmis sur demande.</p>
-      </div>
-      <div class="certs">
-        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg><h3>Certification qualité</h3><p>Norme ISO 9001 ou équivalent.</p><span class="st todo">[À préciser]</span></div>
-        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3s-6 6-6 11a6 6 0 0 0 12 0c0-5-6-11-6-11z"/></svg><h3>Réaction au feu</h3><p>Procès-verbaux des toiles (classement M2 ou équivalent).</p><span class="st todo">[À préciser]</span></div>
-        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><h3>Fiches techniques</h3><p>Fiches des toiles, des structures et notices de montage.</p><span class="st">Disponibles</span></div>
-        <div class="cert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16v13H4z M8 7V4h8v3 M8 12h8M8 16h5"/></svg><h3>Garantie</h3><p>Garantie sur les toiles et les structures, pièces de rechange disponibles.</p><span class="st todo">[Durée à préciser]</span></div>
-      </div>
-    </div>
-  </section>
-  <div class="band">
-    <div class="wrap">
-      <div><h2>Un projet ou une consultation en cours ?</h2><p>Notre équipe étudie votre cahier des charges et vous répond rapidement.</p></div>
-      <a class="btn" href="contact.html">Nous contacter</a>
-    </div>
+<section class="banner" style="background-image:url('https://images.unsplash.com/photo-1785858037852-f60925488591?auto=format&fit=crop&w=1920&q=75')"><div class="wrap"><p class="crumb"><a href="index.html">Accueil</a> <span>/</span> Société</p><h1>La société</h1><p>Fabricant marocain de tentes sur mesure et importateur de solutions d'ombrage.</p></div></section>
+<section class="sec"><div class="wrap split">
+  <div class="splitimg"><img src="https://images.unsplash.com/photo-1630930678172-63343537a00a?auto=format&fit=crop&w=900&q=75" alt="Couture d'une toile en atelier" loading="lazy"></div>
+  <div><div class="ttl"><h2>Qui <em>sommes-nous</em></h2></div>
+  <p>ECATEM est une société marocaine qui exerce deux métiers complémentaires : la <strong>fabrication de tentes</strong> dans son propre atelier et l'<strong>importation de produits d'ombrage</strong> (parasols, pergolas, stores et voiles).</p>
+  <p>Notre équipe réunit des couturiers, des soudeurs et des techniciens de montage. Ensemble, ils conçoivent des abris adaptés à chaque usage, de la petite tente d'accueil au grand hangar.</p>
+  <p>Nous livrons et installons nos produits sur l'ensemble du territoire, et assurons le suivi après la pose.</p></div>
+</div></section>
+<section class="sec grey"><div class="wrap">
+  <div class="ttl c"><h2>Nos <em>valeurs</em></h2></div>
+  <div class="values">
+    <div><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Qualité</h3><p>Matériaux contrôlés et finitions vérifiées en atelier.</p></div>
+    <div><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span><h3>Sur mesure</h3><p>Chaque projet est adapté aux dimensions et à l'usage du client.</p></div>
+    <div><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Délais tenus</h3><p>Un planning clair, de la commande à la livraison.</p></div>
+    <div><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 2 5 5"/></svg></span><h3>Proximité</h3><p>Une équipe disponible avant, pendant et après le montage.</p></div>
   </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="ttl"><h2>Nos <em>moyens</em></h2><p>Un atelier équipé et des équipes de pose expérimentées.</p></div>
+  <div class="means">
+    <figure><img src="https://images.unsplash.com/photo-1606501126768-b78d4569d3f9?auto=format&fit=crop&w=800&q=75" alt="Atelier de confection" loading="lazy"><figcaption><h3>Atelier de confection</h3><p>Tables de coupe, machines à coudre industrielles et soudure PVC. Surface : [m²].</p></figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1742349934917-c6932c49d067?auto=format&fit=crop&w=800&q=75" alt="Grande structure textile" loading="lazy"><figcaption><h3>Structures</h3><p>Ossatures en acier galvanisé et en aluminium, de 3 à 25 m de portée.</p></figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1681400739651-db98efd447c5?auto=format&fit=crop&w=800&q=75" alt="Tentes montées sur site" loading="lazy"><figcaption><h3>Équipes de montage</h3><p>[nb] techniciens pour la livraison et la pose partout au Maroc.</p></figcaption></figure>
+  </div>
+</div></section>
+<section class="sec grey"><div class="wrap svwrap"><div class="ttl"><h2>Nos <em>services</em></h2></div><div class="svcs"><div class="svc"><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z M14 6l3 3"/><path d="M4 20h16"/></svg></span><div><h3>Conception</h3><p>Étude du besoin, choix des toiles et des structures, plans et dimensions.</p></div></div><div class="svc"><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6"/></svg></span><div><h3>Fabrication</h3><p>Découpe, couture et soudure des toiles dans notre atelier, contrôle de chaque pièce.</p></div></div><div class="svc"><span class="ring"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z M14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><div><h3>Livraison et montage</h3><p>Transport et montage par nos équipes partout au Maroc, puis service après-vente.</p></div></div></div></div></section>
+<section class="stats" style="background-image:linear-gradient(rgba(4,52,112,.88),rgba(4,52,112,.88)),url('https://images.unsplash.com/photo-1782025419777-09e493453d9f?auto=format&fit=crop&w=1600&q=75')"><div class="wrap">
+  <h2>Pourquoi choisir ECATEM ?</h2><span class="bar"></span>
+  <p class="lead">Une équipe qui conçoit, fabrique et installe elle-même ses tentes, avec des matériaux choisis pour le climat marocain.</p>
+  <div class="nums">
+    <div><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><strong>[nb]</strong><span>Années d'expérience</span></div>
+    <div><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 2 5 5"/></svg><strong>[nb]</strong><span>Clients</span></div>
+    <div><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20L12 4l10 16z"/><path d="M12 4v16M8.5 20L12 13l3.5 7"/></svg><strong>[nb]</strong><span>Tentes fabriquées</span></div>
+    <div><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><strong>[nb]</strong><span>Projets réalisés</span></div>
+  </div>
+  <a class="btn or" href="contact.html">Demander un devis</a>
+</div></section>
+<section class="ctaband"><div class="wrap"><div><h2>Un projet de tente ou d'ombrage ?</h2><p>Notre équipe étudie votre besoin et vous répond rapidement.</p></div><div class="ctabtns"><a class="btn wh" href="contact.html">Nous contacter</a><span class="ctatel"><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+212 [à compléter]</span></div></div></section>
 </main>
-<footer>
-  <div class="wrap">
-    <div class="f-grid">
-      <div><p style="font-family:var(--serif);font-size:1.4rem;letter-spacing:.14em;font-weight:600;margin-bottom:10px">ECATEM</p><p style="opacity:.8;max-width:40ch">Fabrication de tentes sur mesure. Importation de parasols, pergolas et stores.</p></div>
-      <div><h4>Nos produits</h4><ul><li><a href="produits.html">Tentes de réception</a></li><li><a href="produits.html">Tentes de campagne</a></li><li><a href="produits.html">Tentes sanitaires</a></li><li><a href="produits.html">Hangars et abris</a></li><li><a href="produits.html">Parasols, pergolas et stores</a></li></ul></div>
-      <div><h4>Informations</h4><ul><li><a href="societe.html">La société</a></li><li><a href="materiaux.html">Matériaux</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="societe.html#certificats">Qualité et garanties</a></li><li><a href="contact.html#faq">Questions fréquentes</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    </div>
-    <div class="f-base"><span>© 2026 ECATEM. Tous droits réservés.</span><span>Tentes · Parasols · Pergolas · Stores</span></div>
-  </div>
-</footer>
+<footer class="foot"><div class="wrap fgrid">
+  <div><a class="logo light" href="index.html"><svg viewBox="0 0 64 44" aria-hidden="true"><path d="M2 40 L22 8 L32 22 L42 4 L62 40 Z" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round"/><path d="M22 8 V40 M42 4 V40" stroke="#e8833a" stroke-width="2.4"/></svg><span><b>ECATEM</b><small>Tentes · Parasols · Pergolas · Stores</small></span></a>
+  <p>Fabrication de tentes sur mesure et importation de solutions d'ombrage. Livraison et montage partout au Maroc.</p></div>
+  <div><h4>Nos produits</h4><ul><li><a href="produits.html#tentes">Tentes de réception</a></li><li><a href="produits.html#tentes">Tentes de campagne</a></li><li><a href="produits.html#tentes">Tentes sanitaires</a></li><li><a href="produits.html#tentes">Hangars</a></li><li><a href="produits.html#ombrage">Parasols et pergolas</a></li><li><a href="produits.html#ombrage">Stores et voiles</a></li></ul></div>
+  <div><h4>La société</h4><ul><li><a href="societe.html">Qui sommes-nous</a></li><li><a href="materiaux.html">Matériaux</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#faq">Questions fréquentes</a></li></ul></div>
+  <div><h4>Contact</h4><ul class="fc"><li><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>[Adresse], Maroc</li><li><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+212 [à compléter]</li><li><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>contact@[domaine].ma</li><li><svg class="s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lun – Ven, 8h30 – 17h30</li></ul></div>
+</div><div class="fbase"><div class="wrap"><span>© 2026 ECATEM. Tous droits réservés.</span><span>Photos d'illustration : Unsplash</span></div></div></footer>
 <script src="site.js"></script>
 </body>
 </html>
