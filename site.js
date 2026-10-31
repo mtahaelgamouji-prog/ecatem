@@ -30,6 +30,15 @@
     if(q&&document.getElementById('msg')){var sel=document.getElementById('prod');
       if(sel&&/parasol|مظل/i.test(q)){for(var i=0;i<sel.options.length;i++){if(/parasol|مظل/i.test(sel.options[i].text))sel.selectedIndex=i}}
       var m=document.getElementById('msg');if(!m.value)m.value=M.quote+q+'.\n'}}catch(e){}
+  // galerie produit
+  document.querySelectorAll('.pg').forEach(function(g){var s=g.querySelectorAll('.pg-s'),t=g.querySelectorAll('.pg-t'),c=g.querySelector('.pg-count b'),i=0;
+    var go=function(n){i=(n+s.length)%s.length;s.forEach(function(x,k){x.classList.toggle('on',k===i)});t.forEach(function(x,k){x.classList.toggle('on',k===i)});if(c)c.textContent=i+1;if(t[i])t[i].scrollIntoView({block:'nearest',inline:'nearest'})};
+    var rtl=document.documentElement.dir==='rtl';
+    g.querySelector('.pg-prev').addEventListener('click',function(){go(i-1)});g.querySelector('.pg-next').addEventListener('click',function(){go(i+1)});
+    t.forEach(function(x,k){x.addEventListener('click',function(){go(k)})});
+    var x0=null;var m=g.querySelector('.pg-main');m.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});m.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+((dx<0)!==rtl?1:-1))}x0=null})});
+  // onglets
+  document.querySelectorAll('.tabs').forEach(function(tl){var bs=tl.querySelectorAll('[role=tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-selected',on?'true':'false');var p=document.getElementById(x.getAttribute('aria-controls'));if(p)p.hidden=!on})})})});
   // filtres parasols depuis l'adresse (#mat, #grand, #deporte)
   var fh=location.hash.slice(1);
   if(fh){var fbtn=document.querySelector('.pk-filters button[data-f="'+fh+'"]');if(fbtn){fbtn.click();var pf=document.querySelector('.pk-filters');if(pf)setTimeout(function(){pf.scrollIntoView({block:'start'});window.scrollBy(0,-120)},50)}}
