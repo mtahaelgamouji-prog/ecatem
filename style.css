@@ -37,8 +37,8 @@ p{margin:0}
 .dd:hover .sub,.dd:focus-within .sub{opacity:1;visibility:visible}
 .dd>a::after{content:"";position:absolute;left:0;right:0;top:60px;height:45px}
 .mn>li.dd>a{position:relative}
-.sub a{display:block;padding:15px;font-size:14px;color:#003f78;white-space:nowrap}
-.sub a:hover{color:var(--red2)}
+.sub a{display:block;padding:15px;font-size:14px;line-height:22px;color:#003f78;white-space:nowrap;transition:background .2s,color .2s}
+.sub a:hover,.sub a:focus-visible{background:var(--red2);color:#fff}
 .hdr{display:flex;align-items:center;gap:20px;color:var(--navy)}
 .hdr a:hover{color:var(--red2)}
 .sep{width:1px;height:20px;background:#c8d0de}
