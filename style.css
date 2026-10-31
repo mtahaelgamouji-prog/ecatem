@@ -31,14 +31,14 @@ p{margin:0}
 .logo img{height:84px;width:auto}
 .mn{display:flex;gap:4px;list-style:none;margin:0;padding:0}
 .mn>li{position:static}
-.mn>li>a{display:block;padding:36px 16px;font-size:13px;text-transform:uppercase;color:var(--navy);font-weight:400}
+.mn>li>a{display:block;padding:35px 18px;font-size:15px;text-transform:uppercase;letter-spacing:.02em;color:var(--navy);font-weight:500}
 .mn>li>a.on{font-weight:700}
 .mn>li>a:hover{color:var(--red2)}
 .sub{position:absolute;top:100px;left:0;right:0;display:flex;justify-content:center;flex-wrap:wrap;list-style:none;margin:0;padding:0;background:#fff;border-top:1px solid rgba(0,0,0,.15);border-bottom:1px solid rgba(0,0,0,.15);box-shadow:0 6px 4px rgba(0,0,0,.15);opacity:0;visibility:hidden;transition:all .25s}
 .dd:hover .sub,.dd:focus-within .sub{opacity:1;visibility:visible}
 .dd>a::after{content:"";position:absolute;left:0;right:0;top:60px;height:45px}
 .mn>li.dd>a{position:relative}
-.sub a{display:block;padding:15px;font-size:14px;line-height:22px;color:#003f78;white-space:nowrap;transition:background .2s,color .2s}
+.sub a{display:block;padding:15px;font-size:15px;line-height:22px;color:#003f78;white-space:nowrap;transition:background .2s,color .2s}
 .sub a:hover,.sub a:focus-visible{background:var(--red2);color:#fff}
 .hdr{display:flex;align-items:center;gap:20px;color:var(--navy)}
 .hdr a:hover{color:var(--red2)}
@@ -52,7 +52,7 @@ p{margin:0}
  #menu{position:absolute;top:100px;left:0;right:0;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,.1);display:none;max-height:calc(100vh - 100px);overflow:auto}
  #menu.open{display:block}
  .mn{flex-direction:column;padding:10px 0}
- .mn>li>a{padding:12px 24px}
+ .mn>li>a{padding:13px 24px;font-size:16px}
  .sub{position:static;display:block;opacity:1;visibility:visible;box-shadow:none;border:0;padding:0 0 8px 16px}
  .sub a{padding:8px 15px}
  .dd>a::after{display:none}
@@ -332,3 +332,6 @@ html[lang="ar"] .out{line-height:1.4}
 [dir="rtl"] .pk-cat{right:auto;left:12px}
 @media(max-width:1000px){[dir="rtl"] .ftin{padding-left:0;padding-right:20px}}
 @media(max-width:800px){[dir="rtl"] .ben{margin-top:40px}}
+html[lang="ar"] .mn>li>a{font-size:17px;font-weight:500}
+html[lang="ar"] .sub a{font-size:16px}
+@media(max-width:1280px) and (min-width:1101px){.mn>li>a{padding:35px 12px;font-size:14px}}
