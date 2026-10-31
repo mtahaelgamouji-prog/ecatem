@@ -149,8 +149,8 @@ figure.ofi .ofm{border:0;text-transform:none}
 .track{display:flex;gap:30px;overflow:hidden;scroll-behavior:smooth;flex:1}
 .track{align-items:center}
 .lgo{flex:0 0 auto;height:80px;display:flex;align-items:center;padding:0 10px}
-.lgo img{height:46px;width:auto;max-width:190px;object-fit:contain;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s}
-.lgo:hover img{filter:none;opacity:1}
+.lgo img{height:46px;width:auto;max-width:190px;object-fit:contain;transition:transform .3s}
+.lgo:hover img{transform:scale(1.06)}
 .car.fit .carb{visibility:hidden}
 .carb{background:none;border:0;color:var(--navy);cursor:pointer;padding:6px}
 .lgp{grid-column:1;max-width:260px;font-size:15px}
