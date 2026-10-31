@@ -9,7 +9,7 @@ h1,h2,h3{margin:0;line-height:1.27;font-weight:700}
 p{margin:0}
 [hidden]{display:none!important}
 :focus-visible{outline:2px solid var(--red);outline-offset:3px}
-.cont{max-width:1400px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.cont{max-width:1760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
 .s{width:18px;height:18px}.xs{width:12px;height:12px}
 .ttl{font-size:clamp(30px,3.2vw,45px);color:var(--navy)}
 .ttl.w{color:#fff}
@@ -62,7 +62,7 @@ main{padding-top:100px}
 .sl{position:absolute;inset:0;opacity:0;transition:opacity 1s}
 .sl.on{opacity:1;z-index:1}
 .slimg{position:absolute;left:0;right:0;top:0;width:100%;height:calc(100% - 100px);object-fit:cover}
-.sl .cont{position:absolute;left:0;right:0;bottom:0}
+.sl .cont{position:absolute;left:0;right:0;bottom:0;max-width:none}
 .slbox{width:min(1000px,100%);background:rgba(0,63,120,.78);color:#fff;padding:40px 40px 50px;display:grid;gap:18px;justify-items:start;transform:translateY(20px);transition:transform 1s}
 .sl.on .slbox{transform:none}
 .slbox h1,.slbox .slt{font-size:clamp(28px,3vw,40px);font-weight:700;color:#fff;line-height:1.2}
