@@ -145,7 +145,8 @@ figure.ofi .ofm{border:0;text-transform:none}
 .founder{padding:90px 0;background:var(--grey)}
 .fd{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:clamp(40px,6vw,90px);align-items:center}
 .fd-ph{position:relative}
-.fd-frame{position:relative;z-index:1;aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);display:grid;place-content:center;justify-items:center;gap:14px;color:#fff;box-shadow:0 30px 60px rgba(0,30,80,.25)}
+.fd-frame{position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;background:radial-gradient(120% 80% at 50% 20%,#2c57a8 0%,var(--navy) 55%,var(--navy2) 100%);box-shadow:0 30px 60px rgba(0,30,80,.25)}
+.fd-sil{position:absolute;left:50%;bottom:0;width:78%;height:auto;transform:translateX(-50%);fill:rgba(255,255,255,.88)}
 .fd-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .fd-ini{width:130px;height:130px;border-radius:50%;border:3px solid rgba(255,255,255,.85);display:grid;place-items:center;font-size:48px;font-weight:700;letter-spacing:.04em}
 .fd-note{font-size:13px;opacity:.75;text-align:center}
