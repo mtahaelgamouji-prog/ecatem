@@ -1,16 +1,21 @@
 (function(){
+  var hd=document.querySelector('.hd');
+  window.addEventListener('scroll',function(){hd.classList.toggle('sc',window.scrollY>10)},{passive:true});
   var b=document.querySelector('.burger'),m=document.getElementById('menu');
-  if(b&&m)b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});
-  var s=document.querySelectorAll('.slide'),d=document.querySelectorAll('.dots button'),i=0,t;
-  if(s.length){
-    var go=function(n){i=(n+s.length)%s.length;s.forEach(function(x,k){x.classList.toggle('on',k===i);x.setAttribute('aria-hidden',k===i?'false':'true')});d.forEach(function(x,k){x.setAttribute('aria-current',k===i?'true':'false')})};
-    var auto=function(){clearInterval(t);if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;t=setInterval(function(){go(i+1)},6000)};
-    d.forEach(function(x,k){x.addEventListener('click',function(){go(k);auto()})});auto();
-  }
+  if(b)b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function rotate(items,dots,ms){var i=0,t;if(!items.length)return;
+    function go(n){i=(n+items.length)%items.length;items.forEach(function(x,k){x.classList.toggle('on',k===i);if(x.hasAttribute('aria-hidden'))x.setAttribute('aria-hidden',k===i?'false':'true')});if(dots)dots.forEach(function(d,k){d.setAttribute('aria-current',k===i?'true':'false')})}
+    function auto(){clearInterval(t);if(!rm)t=setInterval(function(){go(i+1)},ms)}
+    if(dots)dots.forEach(function(d,k){d.addEventListener('click',function(){go(k);auto()})});auto();}
+  rotate([].slice.call(document.querySelectorAll('.sl')),[].slice.call(document.querySelectorAll('.sldots button')),6000);
+  rotate([].slice.call(document.querySelectorAll('.ci')),null,2500);
+  var tr=document.querySelector('.track');
+  if(tr){document.querySelector('.carb.prev').addEventListener('click',function(){tr.scrollLeft-=340});document.querySelector('.carb.next').addEventListener('click',function(){tr.scrollLeft+=340})}
   var f=document.getElementById('f');
   if(f)f.addEventListener('submit',function(e){e.preventDefault();
-    var n=document.getElementById('nom'),m2=document.getElementById('email'),note=document.getElementById('note');
+    var n=document.getElementById('nom'),em=document.getElementById('email'),note=document.getElementById('note');
     if(!n.value.trim()){n.focus();note.textContent='Veuillez indiquer votre nom.';return}
-    if(!m2.value.trim()||!m2.checkValidity()){m2.focus();note.textContent='Veuillez indiquer une adresse e-mail valide.';return}
+    if(!em.value.trim()||!em.checkValidity()){em.focus();note.textContent='Veuillez indiquer une adresse e-mail valide.';return}
     note.textContent='Merci, votre message a bien été préparé. (Le formulaire sera relié à votre messagerie lors de la mise en ligne.)';});
 })();
