@@ -92,6 +92,26 @@ figure.ofi .ofm{border:0;text-transform:none}
 @media(max-width:900px){.offer{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.offer{grid-template-columns:1fr}}
 
+/* Mosaïque de produits (accueil) */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(200px,17vw,300px);gap:10px;grid-template-areas:"a a b c" "a a d d" "e f f g" "h h i g"}
+.bx{position:relative;overflow:hidden;display:block;background:var(--navy2);border-radius:4px}
+.g-a{grid-area:a}.g-b{grid-area:b}.g-c{grid-area:c}.g-d{grid-area:d}.g-e{grid-area:e}.g-f{grid-area:f}.g-g{grid-area:g}.g-h{grid-area:h}.g-i{grid-area:i}
+.bx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.bx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,20,50,0) 40%,rgba(0,20,50,.78));transition:background .4s}
+.bx-tx{position:absolute;z-index:1;left:24px;right:80px;bottom:22px;display:grid;gap:4px;color:#fff}
+.bx-tag{justify-self:start;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--red2);padding:3px 10px}
+.bx-tag:where(:not(:empty)){line-height:1.6}
+.bx-t{font-size:clamp(18px,1.6vw,24px);font-weight:700;line-height:1.2}
+.g-a .bx-t{font-size:clamp(26px,2.6vw,40px)}
+.bx-d{font-size:15px;opacity:.9}
+.bx-go{position:absolute;z-index:1;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--red2);display:grid;place-items:center;opacity:0;transform:translateX(-10px);transition:.35s}
+.bx-go svg{width:20px;height:20px}
+.bx:hover img{transform:scale(1.06)}
+.bx:hover::after{background:linear-gradient(180deg,rgba(0,63,120,.15) 20%,rgba(0,40,90,.85))}
+.bx:hover .bx-go,.bx:focus-visible .bx-go{opacity:1;transform:none}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr;grid-auto-rows:220px;grid-template-areas:"a a" "a a" "b c" "d d" "e f" "g g" "h i"}}
+@media(max-width:520px){.bento{grid-template-columns:1fr;grid-auto-rows:240px;grid-template-areas:"a" "b" "c" "d" "e" "f" "g" "h" "i"}.bx-go{opacity:1;transform:none}}
+
 /* Nouveauté : image pleine largeur */
 .new-box{position:relative;padding:115px 0;margin-top:65px;overflow:hidden;color:#fff}
 .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
