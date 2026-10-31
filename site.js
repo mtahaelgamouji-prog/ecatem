@@ -11,7 +11,7 @@
   rotate([].slice.call(document.querySelectorAll('.sl')),[].slice.call(document.querySelectorAll('.sldots button')),6000);
   rotate([].slice.call(document.querySelectorAll('.ci')),null,2500);
   var tr=document.querySelector('.track');
-  if(tr){document.querySelector('.carb.prev').addEventListener('click',function(){tr.scrollLeft-=340});document.querySelector('.carb.next').addEventListener('click',function(){tr.scrollLeft+=340})}
+  if(tr){var fit=function(){tr.parentNode.classList.toggle('fit',tr.scrollWidth<=tr.clientWidth+2)};fit();window.addEventListener('resize',fit);window.addEventListener('load',fit);document.querySelector('.carb.prev').addEventListener('click',function(){tr.scrollLeft-=340});document.querySelector('.carb.next').addEventListener('click',function(){tr.scrollLeft+=340})}
   var f=document.getElementById('f');
   if(f)f.addEventListener('submit',function(e){e.preventDefault();
     var n=document.getElementById('nom'),em=document.getElementById('email'),note=document.getElementById('note');

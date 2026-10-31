@@ -147,7 +147,11 @@ figure.ofi .ofm{border:0;text-transform:none}
 .lg{display:grid;grid-template-columns:auto 1fr;gap:30px 50px;align-items:center}
 .car{display:flex;align-items:center;gap:10px;min-width:0}
 .track{display:flex;gap:30px;overflow:hidden;scroll-behavior:smooth;flex:1}
-.lgo{flex:0 0 140px;height:70px;display:grid;place-items:center;border:1px dashed #c8d0de;color:#8a96ad;font-size:13px;filter:grayscale(1)}
+.track{align-items:center}
+.lgo{flex:0 0 auto;height:80px;display:flex;align-items:center;padding:0 10px}
+.lgo img{height:46px;width:auto;max-width:190px;object-fit:contain;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s}
+.lgo:hover img{filter:none;opacity:1}
+.car.fit .carb{visibility:hidden}
 .carb{background:none;border:0;color:var(--navy);cursor:pointer;padding:6px}
 .lgp{grid-column:1;max-width:260px;font-size:15px}
 @media(max-width:800px){.lg{grid-template-columns:1fr}.lgp{grid-column:auto}}
