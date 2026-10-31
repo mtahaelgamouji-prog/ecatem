@@ -456,3 +456,11 @@ html[lang="ar"] .sub a{font-size:16px}
 .srch-res small{font-size:13px;color:#7b88a4}
 .srch-res em{font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--red2)}
 .srch-hint,.srch-none{padding:14px 20px;font-size:14px;color:#7b88a4;margin:0}
+
+/* Menu : trait rouge animé au survol (comme Dickson) */
+.mn>li>a{position:relative;transition:color .2s}
+.mn>li>a::before{content:"";position:absolute;left:50%;bottom:30px;width:calc(100% - 36px);height:3px;background:var(--red2);transform:translateX(-50%) scaleX(0);transform-origin:center;transition:transform .3s ease}
+.mn>li>a:hover,.mn>li>a:focus-visible{color:var(--red2)}
+.mn>li>a:hover::before,.mn>li>a:focus-visible::before,.mn>li>a.on::before{transform:translateX(-50%) scaleX(1)}
+@media(max-width:1280px) and (min-width:1101px){.mn>li>a::before{width:calc(100% - 24px)}}
+@media(max-width:1100px){.mn>li>a::before{display:none}}
