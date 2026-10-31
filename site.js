@@ -18,4 +18,12 @@
     if(!n.value.trim()){n.focus();note.textContent='Veuillez indiquer votre nom.';return}
     if(!em.value.trim()||!em.checkValidity()){em.focus();note.textContent='Veuillez indiquer une adresse e-mail valide.';return}
     note.textContent='Merci, votre message a bien été préparé. (Le formulaire sera relié à votre messagerie lors de la mise en ligne.)';});
+  var fb=document.querySelectorAll('.pk-filters button');
+  fb.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
+    fb.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
+    document.querySelectorAll('.pk').forEach(function(p){p.hidden=!(f==='all'||p.getAttribute('data-cat')===f)})})});
+  try{var q=new URLSearchParams(location.search).get('produit');
+    if(q&&document.getElementById('msg')){var sel=document.getElementById('prod');
+      if(sel&&/parasol/i.test(q)){for(var i=0;i<sel.options.length;i++){if(/parasol/i.test(sel.options[i].text))sel.selectedIndex=i}}
+      var m=document.getElementById('msg');if(!m.value)m.value='Bonjour, je souhaite un devis pour : '+q+'.\n'}}catch(e){}
 })();
