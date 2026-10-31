@@ -155,11 +155,12 @@ figure.ofi .ofm{border:0;text-transform:none}
 .fd-kick{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red2)}
 .fd-tx h2{font-size:clamp(32px,3.4vw,48px);color:var(--navy);line-height:1.1}
 .fd-role{font-size:17px;font-weight:500;color:var(--navy2);opacity:.85}
-.fd-q{position:relative;margin:26px 0 8px;padding:0 0 0 34px;border-left:4px solid var(--red2);max-width:760px}
-.fd-q::before{content:"\201C";position:absolute;left:28px;top:-58px;font-size:120px;line-height:1;color:var(--red2);opacity:.18;font-weight:700}
-.fd-q p{font-size:clamp(18px,1.5vw,22px);line-height:1.6;font-weight:500;color:var(--navy);font-style:italic}
+.fd-q{position:relative;margin:22px 0 6px;padding:26px 34px 22px 40px;max-width:780px;background:#fff;border-left:0;box-shadow:0 14px 34px rgba(0,30,80,.08);transform:rotate(-.6deg);background-image:repeating-linear-gradient(transparent 0 37px,rgba(20,56,138,.08) 37px 38px);background-position:0 18px}
+.fd-q::before{content:"\201C";position:absolute;left:10px;top:-22px;font-family:Georgia,serif;font-size:96px;line-height:1;color:var(--red2);opacity:.85}
+.fd-q p{font-family:"Caveat","Segoe Script","Bradley Hand",cursive;font-size:clamp(25px,2.1vw,31px);line-height:38px;font-weight:500;color:#1b3f8f;font-style:normal}
 .fd-bio{max-width:760px;font-size:16px}
-.fd-sign{margin-top:10px;font-size:26px;font-weight:600;color:var(--navy);font-style:italic;letter-spacing:.02em}
+.fd-sign{margin-top:14px;font-family:"Mrs Saint Delafield","Segoe Script",cursive;font-size:clamp(48px,4vw,62px);line-height:1;font-weight:400;color:#1b3f8f;transform:rotate(-4deg);transform-origin:left center}
+.fd-sign-t{margin-top:-4px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#7b88a4}
 @media(max-width:860px){.fd{grid-template-columns:1fr}.fd-ph{max-width:340px;margin:0 auto;width:100%}.founder{padding:60px 0}}
 
 /* Compteur : texte en contour + chiffre */
