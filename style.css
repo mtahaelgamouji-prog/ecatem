@@ -350,8 +350,3 @@ html[lang="ar"] .sub a{font-size:16px}
 @media(max-width:860px){.hz{grid-template-columns:1fr}.hz-date{grid-auto-flow:column;justify-content:start;gap:14px;font-size:64px}.hz-date span:last-child{font-size:64px;margin:0}.haouz{padding:60px 0}}
 @media(max-width:520px){.hz-date,.hz-date span:last-child{font-size:46px}.hz-fig{grid-template-columns:1fr 1fr}}
 [dir="rtl"] .hz-date{justify-items:start}
-/* Ruban noir de deuil (coin de la rubrique Al Haouz) */
-.haouz{position:relative;overflow:hidden}
-.haouz::after{content:"";position:absolute;z-index:2;top:58px;right:-70px;width:320px;height:36px;background:#121212;transform:rotate(45deg);box-shadow:0 4px 10px rgba(0,0,0,.25);background-image:linear-gradient(to bottom,transparent 5px,rgba(255,255,255,.12) 5px,rgba(255,255,255,.12) 6px,transparent 6px,transparent 24px,rgba(255,255,255,.12) 30px,rgba(255,255,255,.12) 31px,transparent 31px);pointer-events:none}
-[dir="rtl"] .haouz::after{right:auto;left:-70px;transform:rotate(-45deg)}
-@media(max-width:520px){.haouz::after{top:22px;right:-86px;width:240px;height:22px}[dir="rtl"] .haouz::after{left:-86px}}
