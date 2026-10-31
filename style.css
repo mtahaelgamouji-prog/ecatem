@@ -155,7 +155,7 @@ figure.ofi .ofm{border:0;text-transform:none}
 .fd-kick{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red2)}
 .fd-tx h2{font-size:clamp(32px,3.4vw,48px);color:var(--navy);line-height:1.1}
 .fd-role{font-size:17px;font-weight:500;color:var(--navy2);opacity:.85}
-.fd-q{position:relative;margin:22px 0 6px;padding:26px 34px 22px 40px;max-width:780px;background:#fff;border-left:0;box-shadow:0 14px 34px rgba(0,30,80,.08);transform:rotate(-.6deg);background-image:repeating-linear-gradient(transparent 0 37px,rgba(20,56,138,.08) 37px 38px);background-position:0 18px}
+.fd-q{position:relative;margin:22px 0 6px;padding:10px 0 0 40px;max-width:780px;background:none;border:0}
 .fd-q::before{content:"\201C";position:absolute;left:10px;top:-22px;font-family:Georgia,serif;font-size:96px;line-height:1;color:var(--red2);opacity:.85}
 .fd-q p{font-family:"Caveat","Segoe Script","Bradley Hand",cursive;font-size:clamp(25px,2.1vw,31px);line-height:38px;font-weight:500;color:#1b3f8f;font-style:normal}
 .fd-bio{max-width:760px;font-size:16px}
