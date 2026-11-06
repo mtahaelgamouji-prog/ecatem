@@ -201,7 +201,7 @@ figure.ofi .ofm{border:0;text-transform:none}
  .track{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;overflow:visible}
  .lgo{height:72px;padding:10px;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:6px}
  .lgo img{height:auto;max-height:40px;max-width:100%}}
-@media(max-width:400px){.track{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.track{grid-template-columns:repeat(2,1fr)}.track .lgo:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}}
 
 /* Pied de page : image sombre + panneau blanc avec logo */
 .ft{position:relative;background-size:cover;background-position:center;color:#fff;font-size:14px}
