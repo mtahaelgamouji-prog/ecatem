@@ -505,7 +505,7 @@ html[lang="ar"] .sub a{font-size:16px}
 .pm-dl dt{color:#7b88a4}
 .pm-dl dd{margin:0;color:var(--navy);font-weight:600}
 @media(max-width:760px){.pm-dl{grid-template-columns:1fr}.pm-dl div{grid-template-columns:120px 1fr}}
-.pm-tbl table{min-width:560px}
+.pm-tbl{overflow-x:auto}.pm-tbl table{min-width:560px;border-collapse:collapse;background:#fff}.pm-tbl th,.pm-tbl td{text-align:start;padding:11px 18px;border-bottom:1px solid var(--line)}.pm-tbl th{font-size:.85em;letter-spacing:.02em;background:#fafafa}.pm-tbl tbody tr:hover{background:#f7f8fa}
 .pm-more{padding:70px 0 90px}
 .pm-more .ttl{margin-bottom:30px}
 .pm-o{display:grid;gap:4px;background:#fff;border:1px solid var(--line);padding-bottom:16px;transition:box-shadow .3s,transform .3s}
