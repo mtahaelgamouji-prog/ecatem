@@ -59,19 +59,38 @@ p{margin:0}
 }
 main{padding-top:100px}
 
-/* Diaporama : image + encadré bleu semi-transparent en bas à gauche */
-.slider{position:relative;height:800px;max-height:calc(100vh - 100px);min-height:560px;overflow:hidden}
+/* Diaporama, structure inspirée de Soltis : photo, aperçu de la suivante, bandeau avec grand titre */
+.slider{--band:210px;position:relative;height:860px;max-height:calc(100vh - 100px);min-height:620px;overflow:hidden;background:var(--navy)}
 .sl{position:absolute;inset:0;opacity:0;transition:opacity 1s}
 .sl.on{opacity:1;z-index:1}
-.slimg{position:absolute;left:0;right:0;top:0;width:100%;height:calc(100% - 100px);object-fit:cover}
-.sl .cont{position:absolute;left:0;right:0;bottom:0;max-width:none}
-.slbox{width:min(1000px,100%);background:rgba(0,63,120,.78);color:#fff;padding:40px 40px 50px;display:grid;gap:18px;justify-items:start;transform:translateY(20px);transition:transform 1s}
-.sl.on .slbox{transform:none}
-.slbox h1,.slbox .slt{font-size:clamp(28px,3vw,40px);font-weight:700;color:#fff;line-height:1.2}
-.sldots{position:absolute;z-index:3;right:max(20px,4vw);bottom:40px;display:flex;gap:10px}
-.sldots button{width:12px;height:12px;border-radius:50%;border:2px solid var(--navy);background:#fff;padding:0;cursor:pointer}
-.sldots button[aria-current="true"]{background:var(--red2);border-color:var(--red2)}
-@media(max-width:700px){.slbox{padding:26px}.slider{height:640px}}
+.slimg{position:absolute;left:0;top:0;width:calc(100% - 64px);height:calc(100% - var(--band));object-fit:cover;transform:scale(1.04);transition:transform 7s ease-out}
+.sl.on .slimg{transform:none}
+.slnext{position:absolute;z-index:2;right:0;top:0;width:64px;height:calc(100% - var(--band));background:#2b3d5c center/cover no-repeat;filter:brightness(.8);transition:background-image .6s}
+.slband{position:absolute;left:0;right:0;bottom:0;height:var(--band);background:var(--navy)}
+.slbox{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:42px;color:#fff}
+.slbox .slt{position:absolute;left:20px;right:20px;bottom:calc(100% - .52em);margin:0;font-size:clamp(56px,8.4vw,150px);line-height:1;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:clip;transform:translateY(24px);opacity:0;transition:transform 1s,opacity 1s}
+.sl.on .slbox .slt{transform:none;opacity:1}
+.slrow{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.slrow p{margin:0;max-width:640px;font-size:clamp(16px,1.25vw,19px);line-height:1.5;color:#fff}
+.slbtns{display:flex;gap:14px;flex-shrink:0}
+.slbtns .btn{min-width:200px;text-align:center;font-weight:600;letter-spacing:.08em}
+.slb1{background:#fff;color:var(--navy);border:1.5px solid #fff}
+.slb1:hover{background:transparent;color:#fff}
+.slb2{background:var(--red2);color:#fff;border:1.5px solid var(--red2)}
+.slb2:hover{background:#fff;color:var(--red2);border-color:#fff}
+.slarr{position:absolute;z-index:3;right:20px;bottom:calc(var(--band) + 34px);display:grid;gap:12px}
+.slarr button{width:56px;height:56px;border-radius:50%;border:1.5px solid #fff;background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.slarr button:hover{background:#fff;color:var(--navy)}
+.slarr svg{width:22px;height:22px}
+[dir="rtl"] .slarr svg{transform:scaleX(-1)}
+.sldots{position:absolute;z-index:3;left:50%;transform:translateX(-50%);bottom:14px;display:flex;gap:10px}
+.sldots button{width:9px;height:9px;border-radius:50%;border:0;background:rgba(255,255,255,.4);padding:0;cursor:pointer}
+.sldots button[aria-current="true"]{background:#fff;width:26px;border-radius:5px}
+[dir="rtl"] .slimg{left:auto;right:0}
+[dir="rtl"] .slnext{right:auto;left:0}
+[dir="rtl"] .slarr{right:auto;left:20px}
+@media(max-width:900px){.slider{--band:300px;height:760px}.slrow{flex-direction:column;align-items:flex-start;gap:20px}.slbtns .btn{min-width:0}}
+@media(max-width:600px){.slider{--band:330px;height:700px;min-height:0}.slimg{width:100%}.slnext{display:none}.slarr{right:14px;top:16px;bottom:auto;grid-auto-flow:column}.slarr button{width:46px;height:46px}[dir="rtl"] .slarr{left:14px}.slbox{padding-bottom:40px}.slbox .slt{white-space:normal;font-size:clamp(44px,13vw,64px);line-height:.95;bottom:calc(100% - .5em)}.slbtns{width:100%;flex-direction:column}.slbtns .btn{width:100%}}
 
 /* Découvrez nos produits */
 .offer-box{padding:65px 0 0}
@@ -538,3 +557,5 @@ html[lang="ar"] .sf-tx h2{font-family:"Tajawal",sans-serif;font-style:normal;fon
 .ttl,.slbox h1,.slbox .slt,.new-box h2,.fair h2,.fd-tx h2,.wm,.pname,.hz-tx h2,.pm-info h1,.out,.counter-box .out{font-family:"Open Sans","Open Sans Condensed","Arial Narrow",sans-serif;font-stretch:75%;font-variation-settings:"wdth" 75;font-style:italic;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;line-height:1.2}
 .wm{font-weight:700}
 html[lang="ar"] .ttl,html[lang="ar"] .slbox h1,html[lang="ar"] .slbox .slt,html[lang="ar"] .new-box h2,html[lang="ar"] .fair h2,html[lang="ar"] .fd-tx h2,html[lang="ar"] .wm,html[lang="ar"] .pname,html[lang="ar"] .hz-tx h2,html[lang="ar"] .pm-info h1,html[lang="ar"] .out{font-family:"Tajawal",sans-serif;font-style:normal;font-stretch:normal;font-variation-settings:normal;text-transform:none;letter-spacing:0;font-weight:700}
+.slbox .slt{line-height:1;font-weight:700;letter-spacing:2px}
+html[lang="ar"] .slbox .slt{line-height:1.25;bottom:calc(100% - .62em)}
