@@ -559,3 +559,24 @@ html[lang="ar"] .sf-tx h2{font-family:"Tajawal",sans-serif;font-style:normal;fon
 html[lang="ar"] .ttl,html[lang="ar"] .slbox h1,html[lang="ar"] .slbox .slt,html[lang="ar"] .new-box h2,html[lang="ar"] .fair h2,html[lang="ar"] .fd-tx h2,html[lang="ar"] .wm,html[lang="ar"] .pname,html[lang="ar"] .hz-tx h2,html[lang="ar"] .pm-info h1,html[lang="ar"] .out{font-family:"Tajawal",sans-serif;font-style:normal;font-stretch:normal;font-variation-settings:normal;text-transform:none;letter-spacing:0;font-weight:700}
 .slbox .slt{line-height:1;font-weight:700;letter-spacing:2px}
 html[lang="ar"] .slbox .slt{line-height:1.25;bottom:calc(100% - .62em)}
+/* Raccourcis d'en-tête (esprit Soltis) */
+.hdin{padding-right:0}
+[dir="rtl"] .hdin{padding-right:max(20px,env(safe-area-inset-right));padding-left:0}
+.hdq{display:flex;height:100%;margin-left:18px}
+[dir="rtl"] .hdq{margin-left:0;margin-right:18px}
+.hq{width:100px;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#fff;font-size:12px;font-weight:600;line-height:1.15;text-align:center;padding:0 8px;transition:filter .2s}
+.hq svg{width:26px;height:26px}
+.hq:hover{filter:brightness(1.12);color:#fff}
+.hq1{background:#5b80b8}.hq2{background:var(--navy)}.hq3{background:var(--red2)}
+@media(max-width:1400px){.mn>li>a{padding-left:12px;padding-right:12px;font-size:14px}.hq{width:88px}}
+@media(max-width:1100px){
+ .hdin{padding-right:max(20px,env(safe-area-inset-right))}
+ .hdq{position:fixed;left:0;right:0;bottom:0;z-index:60;height:64px;margin:0;box-shadow:0 -4px 16px rgba(0,0,0,.12)}
+ [dir="rtl"] .hdq{margin:0}
+ .hq{flex:1;width:auto;flex-direction:column;gap:4px;font-size:11.5px}
+ .hq svg{width:22px;height:22px}
+ body{padding-bottom:64px}
+}
+.mn>li>a{white-space:nowrap}
+@media(max-width:1250px) and (min-width:1101px){.mn>li>a{padding-left:9px;padding-right:9px;font-size:13.5px}.hq{width:80px;font-size:11.5px}.hdr{gap:12px}.logo img{height:74px}}
+@media(max-width:1100px){.slider{max-height:calc(100vh - 164px);min-height:600px}}
