@@ -535,3 +535,7 @@ html[lang="ar"] .sub a{font-size:16px}
 .sf-btn:hover{background:#1a1a1a;color:#fff}
 @media(max-width:860px){.sf-tx h2{font-size:24px;line-height:34px}.sf-in{grid-template-columns:1fr}.sf{padding:60px 0}.sf-50{width:230px}}
 html[lang="ar"] .sf-tx h2{font-family:"Tajawal",sans-serif;font-style:normal;font-weight:700;letter-spacing:0;text-transform:none}
+/* Grands titres : Open Sans Condensed italique (esprit Scolaro) */
+.ttl,.slbox h1,.slbox .slt,.new-box h2,.fair h2,.fd-tx h2,.wm,.pname,.hz-tx h2,.pm-info h1,.out,.counter-box .out{font-family:"Open Sans","Open Sans Condensed","Arial Narrow",sans-serif;font-stretch:75%;font-variation-settings:"wdth" 75;font-style:italic;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;line-height:1.2}
+.wm{font-weight:700}
+html[lang="ar"] .ttl,html[lang="ar"] .slbox h1,html[lang="ar"] .slbox .slt,html[lang="ar"] .new-box h2,html[lang="ar"] .fair h2,html[lang="ar"] .fd-tx h2,html[lang="ar"] .wm,html[lang="ar"] .pname,html[lang="ar"] .hz-tx h2,html[lang="ar"] .pm-info h1,html[lang="ar"] .out{font-family:"Tajawal",sans-serif;font-style:normal;font-stretch:normal;font-variation-settings:normal;text-transform:none;letter-spacing:0;font-weight:700}
