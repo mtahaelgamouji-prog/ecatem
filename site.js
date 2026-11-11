@@ -70,3 +70,8 @@
     so.addEventListener('click',function(e){var a=e.target.closest('a');if(a&&a.hash&&a.pathname===location.pathname){close()}});
   }
 })();
+
+(function(){var d=document.querySelector('.langdd');if(!d)return;var b=d.querySelector('.langbtn');
+b.addEventListener('click',function(e){e.stopPropagation();var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});
+document.addEventListener('click',function(e){if(!d.contains(e.target)){d.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){d.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}});})();
