@@ -638,8 +638,3 @@ html[lang="ar"] .slbox .slt{line-height:1.25;bottom:calc(100% - .62em)}
 .slrow{align-items:flex-end}
 @media(max-width:900px){.slider{--band:250px}}
 @media(max-width:600px){.slider{--band:270px}}
-/* Partenaires : mention revendeur agréé */
-.lgo.ag{flex-direction:column;justify-content:center;gap:8px;height:auto;min-height:80px}
-.lgo-ag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);white-space:nowrap}
-.lgo-ag::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--red2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/9px no-repeat}
-@media(max-width:800px){.lgo.ag{height:auto;min-height:86px;padding:12px 8px}.lgo-ag{font-size:9.5px;letter-spacing:.05em}}
