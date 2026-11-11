@@ -580,3 +580,11 @@ html[lang="ar"] .slbox .slt{line-height:1.25;bottom:calc(100% - .62em)}
 .mn>li>a{white-space:nowrap}
 @media(max-width:1250px) and (min-width:1101px){.mn>li>a{padding-left:9px;padding-right:9px;font-size:13.5px}.hq{width:80px;font-size:11.5px}.hdr{gap:12px}.logo img{height:74px}}
 @media(max-width:1100px){.slider{max-height:calc(100vh - 164px);min-height:600px}}
+/* Cercle de progression autour de la flèche suivante */
+.slnx{position:relative;border-color:rgba(255,255,255,.35)!important}
+.slring{position:absolute;inset:-3px;width:calc(100% + 6px)!important;height:calc(100% + 6px)!important;transform:rotate(-90deg);pointer-events:none;overflow:visible}
+[dir="rtl"] .slarr .slring{transform:rotate(-90deg) scaleY(-1)}
+.slring circle{fill:none;stroke:#fff;stroke-width:2;stroke-dasharray:179.1;stroke-dashoffset:179.1}
+.slring.run circle{animation:slclock 6.5s linear forwards}
+@keyframes slclock{to{stroke-dashoffset:0}}
+.slnx:hover .slring circle{stroke:var(--navy)}
