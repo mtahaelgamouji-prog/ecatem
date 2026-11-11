@@ -628,3 +628,13 @@ html[lang="ar"] .slbox .slt{line-height:1.25;bottom:calc(100% - .62em)}
 .langm .langs a{display:flex;align-items:center;gap:8px;padding:7px 14px 7px 8px}
 .langm .langs a span{display:inline;color:inherit}
 .langm .langs a.on{background:#eef2f9;color:var(--navy);border-color:var(--navy)}
+/* Hero : lien discret « Découvrir » */
+.sllink{display:inline-flex;align-items:center;gap:12px;flex-shrink:0;padding:10px 0;color:#fff;font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.5);transition:border-color .2s,gap .2s}
+.sllink svg{width:20px;height:20px;transition:transform .25s}
+.sllink:hover{color:#fff;border-color:#fff;gap:16px}
+.sllink:hover svg{transform:translateX(3px)}
+[dir="rtl"] .sllink svg{transform:scaleX(-1)}
+[dir="rtl"] .sllink:hover svg{transform:scaleX(-1) translateX(3px)}
+.slrow{align-items:flex-end}
+@media(max-width:900px){.slider{--band:250px}}
+@media(max-width:600px){.slider{--band:270px}}
