@@ -525,9 +525,8 @@ html[lang="ar"] .sub a{font-size:16px}
 .sf{background:#dcdad5;padding:80px 0}
 .sf-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px);align-items:center;max-width:1400px}
 .sf-emb{justify-self:center;display:grid;justify-items:center;gap:8px}
-.sf-50{display:block;width:clamp(230px,24vw,360px);height:auto;color:var(--navy);overflow:visible}
-.sf-50 ellipse{stroke:var(--red2)}
-.sf-yr{margin-top:26px;font-size:clamp(26px,2.4vw,38px);font-weight:600;letter-spacing:.18em;color:#1a1a1a;direction:ltr}
+.sf-50{display:block;width:clamp(230px,24vw,360px);height:auto;color:#111;overflow:visible}
+.sf-yr{margin-top:26px;font-size:clamp(26px,2.4vw,38px);font-weight:500;letter-spacing:.3em;color:#111;direction:ltr}
 .sf-tx{display:grid;gap:18px;justify-items:start;max-width:740px}
 .sf-tx h2{font-family:"Open Sans","Open Sans Condensed","Arial Narrow",sans-serif;font-stretch:75%;font-variation-settings:"wdth" 75;font-style:italic;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;font-size:30px;line-height:42px;color:#000;margin-bottom:5px}
 .sf-tx p{font-size:16px;color:#2a2a2a;line-height:1.6}
