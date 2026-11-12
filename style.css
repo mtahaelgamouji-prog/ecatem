@@ -698,3 +698,23 @@ html[lang="ar"] .mx-c h3{font-family:"Tajawal",sans-serif;font-style:normal;font
 @media(hover:none),(max-width:600px){.mx-p{transform:none}.mx-p p,.mx-p ul{opacity:1}.mx-c::before{background:linear-gradient(180deg,rgba(10,20,40,.5) 0%,rgba(10,22,45,.35) 40%,rgba(10,22,45,.92) 100%)}}
 @media(max-width:600px){.mx-grid{grid-template-columns:1fr;gap:16px}.mx-c{height:430px}}
 @media(max-width:600px){.mx-c{height:360px}.mx-p ul{display:none}.mx-p{gap:10px}.mx-c::before{background:linear-gradient(180deg,rgba(10,20,40,.5) 0%,rgba(10,22,45,.1) 35%,rgba(10,22,45,.55) 60%,rgba(10,22,45,.95) 100%)!important}}
+/* Pourquoi choisir ECATEM : version claire et numérotée */
+.why{background:#f4f1ec;padding:110px 0}
+.why-in{display:grid;grid-template-columns:minmax(260px,.8fr) 1.6fr;gap:clamp(40px,6vw,110px);align-items:start}
+.why-head{position:sticky;top:130px;display:grid;gap:20px}
+.why-head .fd-kick,.why-head .ttl{margin:0}
+.why-head .ttl{font-size:clamp(32px,3.2vw,48px);line-height:1.08}
+.why-head>p{margin:0;font-size:16px;line-height:1.7;color:#4a5670}
+.why-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.why-list li{position:relative;padding:34px 0 40px;border-top:1px solid #d9d3c8;display:grid;gap:12px;align-content:start}
+.why-list li::before{content:"";position:absolute;left:0;top:-1px;width:0;height:2px;background:var(--red2);transition:width .5s ease}
+.why-list li:hover::before{width:100%}
+[dir="rtl"] .why-list li::before{left:auto;right:0}
+.why-n{font-family:"Open Sans","Arial Narrow",sans-serif;font-stretch:75%;font-variation-settings:"wdth" 75;font-style:italic;font-weight:700;font-size:20px;color:var(--red2);letter-spacing:1px}
+.why-ic{position:absolute;top:30px;right:0;width:34px;height:34px;color:var(--navy);opacity:.75}
+[dir="rtl"] .why-ic{right:auto;left:0}
+.why-list h3{margin:0;font-size:21px;color:var(--navy);line-height:1.25}
+.why-list p{margin:0;font-size:15px;line-height:1.7;color:#4a5670}
+html[lang="ar"] .why-n{font-family:"Tajawal",sans-serif;font-style:normal;font-stretch:normal;font-variation-settings:normal}
+@media(max-width:900px){.why{padding:70px 0}.why-in{grid-template-columns:1fr}.why-head{position:static}}
+@media(max-width:600px){.why-list{grid-template-columns:1fr}.why-list li{padding:26px 0 30px}}
