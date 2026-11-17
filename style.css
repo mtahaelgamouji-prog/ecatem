@@ -805,7 +805,7 @@ html[lang="ar"] .sb-n{letter-spacing:0}
 .ws-box{background:var(--navy);color:#fff;padding:90px 0}
 .ws-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,70px);align-items:center;max-width:1300px}
 .ws-im{position:relative;margin:0;aspect-ratio:16/9;overflow:hidden}
-.ws-im img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+.ws-im img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .ws-im figcaption{position:absolute;left:0;bottom:0;background:var(--red2);color:#fff;padding:12px 18px;display:grid;line-height:1.1}
 [dir="rtl"] .ws-im figcaption{left:auto;right:0}
 .ws-im figcaption b{font-size:26px;font-weight:700}
