@@ -908,3 +908,9 @@ html[lang="zh"] .ttl,html[lang="zh"] .slbox h1,html[lang="zh"] .slbox .slt,html[
 html[lang="zh"] .mn>li>a{font-size:15.5px;letter-spacing:.04em}
 html[lang="zh"] .sb-n{letter-spacing:.06em}
 html[lang="zh"] .langmini a[lang="zh"],.langmini a[lang="zh"]{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0}
+/* Langues plus visibles */
+.langmini{gap:14px}
+.langmini a{font-size:15px;font-weight:700;color:#8793a8;letter-spacing:.06em}
+.langmini a.on{color:var(--navy);border-bottom:2px solid var(--red2)!important;padding-bottom:3px}
+@media(min-width:1101px){body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a{color:rgba(255,255,255,.75)}body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a.on{color:#fff;border-bottom-color:#fff!important}}
+.langm .langs a{font-size:16px}
