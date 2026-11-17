@@ -865,3 +865,15 @@ main{padding-top:calc(100px + var(--tb))}
 .slider{max-height:calc(100vh - 100px - var(--tb))}
 @media(max-width:1100px){.slider{max-height:calc(100vh - 164px - var(--tb))}#menu{max-height:calc(100vh - 164px - var(--tb))}}
 @media(max-width:700px){:root{--tb:36px}html.tb-off{--tb:0px}.tbar-in{padding:0 40px 0 12px;justify-content:flex-start}[dir="rtl"] .tbar-in{padding:0 12px 0 40px}.tbar p{font-size:12.5px;gap:8px}.tbar-msg{min-width:0}.tbar-a{font-size:0;gap:0}.tbar-a svg{width:17px;height:17px}.tbar-tag{font-size:10px}}
+/* Sélecteur de langue en boutons accolés (façon Shadesign) */
+.langseg{display:flex;gap:0;border:1.5px solid var(--navy)}
+.langseg a{display:grid;place-items:center;width:44px;height:34px;padding:0;margin:0;border:0!important;border-radius:0;background:transparent;color:var(--navy);font-size:13px;font-weight:700;letter-spacing:.04em;opacity:1;transition:background .2s,color .2s}
+.langseg a+a{border-left:1.5px solid var(--navy)!important}
+[dir="rtl"] .langseg a+a{border-left:0!important;border-right:1.5px solid var(--navy)!important}
+.langseg a:hover{background:#eef2f9;color:var(--navy)}
+.langseg a.on{background:var(--navy);color:#fff}
+.langm .langs{display:flex;gap:0;border:1.5px solid var(--navy);width:max-content}
+.langm .langs a{display:grid;place-items:center;width:56px;height:41px;padding:0;border:0;border-radius:0;font-size:14px;font-weight:700;color:var(--navy);background:transparent}
+.langm .langs a+a{border-left:1.5px solid var(--navy)}
+[dir="rtl"] .langm .langs a+a{border-left:0;border-right:1.5px solid var(--navy)}
+.langm .langs a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
