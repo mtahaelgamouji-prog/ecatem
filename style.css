@@ -914,3 +914,8 @@ html[lang="zh"] .langmini a[lang="zh"],.langmini a[lang="zh"]{font-family:"Noto 
 .langmini a.on{color:var(--navy);border-bottom:2px solid var(--red2)!important;padding-bottom:3px}
 @media(min-width:1101px){body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a{color:rgba(255,255,255,.75)}body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a.on{color:#fff;border-bottom-color:#fff!important}}
 .langm .langs a{font-size:16px}
+/* Logos partenaires : gris, couleur au survol */
+@media(hover:hover){
+ .lgo img{filter:grayscale(1);opacity:.6;transition:filter .35s,opacity .35s,transform .3s}
+ .lgo:hover img{filter:none;opacity:1}
+}
