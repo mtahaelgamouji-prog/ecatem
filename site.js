@@ -78,3 +78,4 @@
 b.addEventListener('click',function(e){e.stopPropagation();var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});
 document.addEventListener('click',function(e){if(!d.contains(e.target)){d.classList.remove('open');b.setAttribute('aria-expanded','false')}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open')){d.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}});})();
+(function(){var b=document.querySelector('.tbar');if(!b)return;var x=b.querySelector('.tbar-x');x.addEventListener('click',function(){document.documentElement.classList.add('tb-off');try{localStorage.setItem('ecatem-tb',b.getAttribute('data-id'))}catch(e){}})})();
