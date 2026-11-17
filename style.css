@@ -740,3 +740,24 @@ html[lang="ar"] .why-n{font-family:"Tajawal",sans-serif;font-style:normal;font-s
 @media(max-width:1100px){.ft2-in{grid-template-columns:1fr}.ft2-cols{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.ft2-in{padding-top:60px}.ft2-cols{grid-template-columns:1fr 1fr;gap:34px 20px}.ft2-cols h4{font-size:17px;margin-bottom:14px}.ft2-cols ul{gap:10px}.ft2-cols{font-size:15px}}
 .ft2-co a{direction:ltr;unicode-bidi:isolate;display:inline-block}
+/* Nos catalogues (esprit Shadesign) */
+.ct2{padding:100px 0;background:#fff}
+.ct2-in{display:grid;grid-template-columns:minmax(240px,.9fr) 2fr;gap:clamp(40px,6vw,100px);align-items:start}
+.ct2-head{display:grid;gap:18px;position:sticky;top:130px}
+.ct2-head .fd-kick,.ct2-head .ttl{margin:0}
+.ct2-head .ttl{font-size:clamp(32px,3.2vw,48px);line-height:1.08}
+.ct2-head>p{margin:0;font-size:16px;line-height:1.7;color:#4a5670}
+.ct2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
+.ct2-c{display:grid;gap:6px;align-content:start;color:var(--navy)}
+.ct2-im{display:block;aspect-ratio:1;overflow:hidden;background:#f4f1ec;margin-bottom:16px;box-shadow:0 1px 0 var(--line)}
+.ct2-im img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.ct2-c:hover .ct2-im img{transform:scale(1.04)}
+.ct2-t{font-size:20px;font-weight:700;line-height:1.25}
+.ct2-s{font-size:15px;color:#4a5670}
+.ct2-m{font-size:13px;color:#8a96ad}
+.ct2-go{margin-top:12px;display:inline-flex;align-items:center;gap:10px;justify-self:start;padding:8px 0;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:1.5px solid var(--navy);transition:gap .2s,color .2s,border-color .2s}
+.ct2-go svg{width:18px;height:18px}
+.ct2-c:hover .ct2-go{gap:14px;color:var(--red2);border-color:var(--red2)}
+[dir="rtl"] .ct2-go svg{transform:scaleX(-1)}
+@media(max-width:900px){.ct2{padding:70px 0}.ct2-in{grid-template-columns:1fr}.ct2-head{position:static}}
+@media(max-width:520px){.ct2-grid{gap:22px}.ct2-t{font-size:17px}.ct2-go{font-size:11.5px;letter-spacing:.08em}}

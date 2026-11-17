@@ -1,8 +1,8 @@
 (function(){
   var L=(document.documentElement.lang||'fr').slice(0,2);
-  var M={fr:{name:'Veuillez indiquer votre nom.',mail:'Veuillez indiquer une adresse e-mail valide.',ok:'Merci, votre message a bien été préparé. (Le formulaire sera relié à votre messagerie lors de la mise en ligne.)',quote:'Bonjour, je souhaite un devis pour : '},
-  en:{name:'Please enter your name.',mail:'Please enter a valid email address.',ok:'Thank you, your message is ready. (The form will be connected to your mailbox when the site goes live.)',quote:'Hello, I would like a quote for: '},
-  ar:{name:'يرجى إدخال اسمكم.',mail:'يرجى إدخال بريد إلكتروني صحيح.',ok:'شكراً، تم تجهيز رسالتكم. (سيتم ربط النموذج ببريدكم عند الإطلاق.)',quote:'مرحباً، أرغب في الحصول على عرض سعر لـ: '}}[L]||{};
+  var M={fr:{name:'Veuillez indiquer votre nom.',mail:'Veuillez indiquer une adresse e-mail valide.',ok:'Merci, votre message a bien été préparé. (Le formulaire sera relié à votre messagerie lors de la mise en ligne.)',quote:'Bonjour, je souhaite un devis pour : ',cat:'Bonjour, je souhaite recevoir par e-mail le '},
+  en:{name:'Please enter your name.',mail:'Please enter a valid email address.',ok:'Thank you, your message is ready. (The form will be connected to your mailbox when the site goes live.)',quote:'Hello, I would like a quote for: ',cat:'Hello, please e-mail me the '},
+  ar:{name:'يرجى إدخال اسمكم.',mail:'يرجى إدخال بريد إلكتروني صحيح.',ok:'شكراً، تم تجهيز رسالتكم. (سيتم ربط النموذج ببريدكم عند الإطلاق.)',quote:'مرحباً، أرغب في الحصول على عرض سعر لـ: ',cat:'مرحباً، أرغب في التوصل عبر البريد الإلكتروني بـ'}}[L]||{};
   var hd=document.querySelector('.hd');
   window.addEventListener('scroll',function(){hd.classList.toggle('sc',window.scrollY>10)},{passive:true});
   var b=document.querySelector('.burger'),m=document.getElementById('menu');
@@ -32,8 +32,11 @@
     document.querySelectorAll('.pk').forEach(function(p){p.hidden=!(f==='all'||p.getAttribute('data-cat')===f)})})});
   try{var q=new URLSearchParams(location.search).get('produit');
     if(q&&document.getElementById('msg')){var sel=document.getElementById('prod');
-      if(sel&&/parasol|مظل/i.test(q)){for(var i=0;i<sel.options.length;i++){if(/parasol|مظل/i.test(sel.options[i].text))sel.selectedIndex=i}}
-      var m=document.getElementById('msg');if(!m.value)m.value=M.quote+q+'.\n'}}catch(e){}
+      var hit=-1;if(sel){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===q)hit=i}
+      if(hit<0&&/parasol|مظل/i.test(q)){for(var i=0;i<sel.options.length;i++){if(/parasol|مظل/i.test(sel.options[i].text)&&!/catalog|كتالوج/i.test(sel.options[i].text)){hit=i;break}}}
+      if(hit>=0)sel.selectedIndex=hit}
+      var cat=/catalog|كتالوج/i.test(q);
+      var m=document.getElementById('msg');if(!m.value)m.value=(cat?M.cat+q.toLowerCase():M.quote+q)+'.\n'}}catch(e){}
   // galerie produit
   document.querySelectorAll('.pg').forEach(function(g){var s=g.querySelectorAll('.pg-s'),t=g.querySelectorAll('.pg-t'),c=g.querySelector('.pg-count b'),i=0;
     var go=function(n){i=(n+s.length)%s.length;s.forEach(function(x,k){x.classList.toggle('on',k===i)});t.forEach(function(x,k){x.classList.toggle('on',k===i)});if(c)c.textContent=i+1;if(t[i])t[i].scrollIntoView({block:'nearest',inline:'nearest'})};
