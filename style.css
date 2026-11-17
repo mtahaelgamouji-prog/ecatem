@@ -823,3 +823,15 @@ html[lang="ar"] .sb-n{letter-spacing:0}
 html[lang="ar"] .ws-ttl{font-family:"Tajawal",sans-serif}
 @media(max-width:900px){.ws{padding:0}.ws-box{padding:60px 0}.ws-in{grid-template-columns:1fr}}
 @media(max-width:600px){.ws-im figcaption{padding:7px 11px}.ws-im figcaption b{font-size:18px}.ws-im figcaption span{font-size:9px}}
+/* Atouts en colonnes (esprit « Der beste Schatten der Welt ») */
+.bw{background:#fff;padding:90px 0}
+.bw-ttl{margin:0 0 40px;font-size:clamp(30px,2.8vw,40px);font-weight:300;color:#111;line-height:1.2}
+.bw-ttl b{font-weight:700}
+.bw-ttl::after{content:".";color:var(--red2);font-weight:700}
+.bw-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:20px}
+.bw-list li{border-top:2px solid #b9c7d6;padding-top:20px}
+.bw-list strong{display:block;font-size:16px;color:#111;line-height:1.45;margin-bottom:8px}
+.bw-list p{margin:0;font-size:14.5px;line-height:1.55;color:#4a4a4a}
+html[lang="ar"] .bw-ttl{font-family:"Tajawal",sans-serif}
+@media(max-width:1100px){.bw-list{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:34px}}
+@media(max-width:600px){.bw{padding:60px 0}.bw-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}}
