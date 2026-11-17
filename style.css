@@ -800,3 +800,26 @@ html[lang="ar"] .sb-n{letter-spacing:0}
 @media(max-width:1100px){.sb-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}}
 @media(max-width:600px){.sb{padding:60px 0}.sb-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.sb-n{font-size:13px;letter-spacing:.06em;top:10px}.sb-b{font-size:12.5px;padding:7px 12px;bottom:10px}}
 @media(max-width:600px){.sb-c:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}}
+/* Nous sommes ECATEM (esprit Shadesign, en bleu marine) */
+.ws{background:#fff;padding:0 max(14px,1vw)}
+.ws-box{background:var(--navy);color:#fff;padding:90px 0}
+.ws-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,70px);align-items:center;max-width:1300px}
+.ws-im{position:relative;margin:0;aspect-ratio:16/9;overflow:hidden}
+.ws-im img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
+.ws-im figcaption{position:absolute;left:0;bottom:0;background:var(--red2);color:#fff;padding:12px 18px;display:grid;line-height:1.1}
+[dir="rtl"] .ws-im figcaption{left:auto;right:0}
+.ws-im figcaption b{font-size:26px;font-weight:700}
+.ws-im figcaption span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.ws-tx{display:grid;gap:16px;justify-items:start}
+.ws-ttl{margin:0 0 8px;font-size:clamp(30px,2.8vw,40px);font-weight:300;line-height:1.2;color:#fff}
+.ws-ttl b{font-weight:700}
+.ws-ttl::after{content:".";color:var(--red2);font-weight:700}
+.ws-tx p{margin:0;font-size:16px;line-height:1.75;color:rgba(255,255,255,.88)}
+.ws-tx p b{color:#fff}
+.ws-link{margin-top:8px;display:inline-flex;align-items:center;gap:12px;padding:10px 0;color:#fff;font-size:13.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid rgba(255,255,255,.55);transition:gap .2s,border-color .2s}
+.ws-link svg{width:20px;height:20px}
+.ws-link:hover{color:#fff;gap:16px;border-color:#fff}
+[dir="rtl"] .ws-link svg{transform:scaleX(-1)}
+html[lang="ar"] .ws-ttl{font-family:"Tajawal",sans-serif}
+@media(max-width:900px){.ws{padding:0}.ws-box{padding:60px 0}.ws-in{grid-template-columns:1fr}}
+@media(max-width:600px){.ws-im figcaption{padding:7px 11px}.ws-im figcaption b{font-size:18px}.ws-im figcaption span{font-size:9px}}
