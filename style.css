@@ -968,3 +968,56 @@ html[lang="ar"] .cc-ttl{font-family:"Tajawal",sans-serif}
 [dir="rtl"] .gv-l{right:auto;left:16px;text-align:left}
 html[lang="ar"] .gv-ttl,html[lang="ar"] .gv-l{letter-spacing:0}
 @media(max-width:700px){.gv-cats{margin-top:-90px}.gv-head{padding:44px 0 120px}.gv-grid{grid-template-columns:1fr;gap:14px}.gv-l{font-size:12.5px;padding:9px 12px}}
+
+/* ===================================================================
+   HARMONISATION GRAPHIQUE (une famille, un style de titre,
+   palette resserrée, formes droites, effets sobres)
+   =================================================================== */
+:root{--f:"Open Sans","Segoe UI",Arial,sans-serif;--bg2:#f3f4f6;--sky:var(--navy)}
+body{font-family:var(--f);font-stretch:100%}
+/* Un seul style de titre : Open Sans condensé, droit, fin + gras, bleu marine */
+.ttl,.sb-ttl,.ct2-ttl,.bw-ttl,.osr-ttl,.ws-ttl,.cc-ttl,.lgx .ct2-ttl,.fair h2,.new-box h2,.hz-tx h2,.fd-tx h2,.pm-info h1,.pname,.sf-tx h2,.ct-card h2{
+ font-family:"Open Sans",sans-serif!important;font-stretch:75%!important;font-variation-settings:"wdth" 75!important;
+ font-style:normal!important;text-transform:none!important;letter-spacing:.005em!important;font-weight:300!important;color:var(--navy)!important;line-height:1.12!important}
+.ttl b,.sb-ttl b,.ct2-ttl b,.bw-ttl b,.osr-ttl b,.ws-ttl b,.cc-ttl b{font-weight:700!important;color:inherit}
+.ttl,.sb-ttl,.ct2-ttl,.bw-ttl,.osr-ttl,.cc-ttl{font-size:clamp(32px,3vw,46px)!important}
+.ws-ttl{color:#fff!important}
+.pm-info h1,.pname,.ct-card h2{font-weight:600!important}
+/* Titres d'affichage (hero, grands titres de page) : même famille, droits */
+.slbox .slt,.wm,.gv-ttl,.out,.mx-c h3,.abx-badge b,.abx-kpi dt,.why-n,.ws-im figcaption b{font-family:"Open Sans",sans-serif!important;font-stretch:75%!important;font-variation-settings:"wdth" 75!important;font-style:normal!important}
+.slbox .slt{font-weight:700!important;letter-spacing:.01em!important}
+.wm{font-weight:700!important;letter-spacing:.01em}
+.gv-ttl{font-size:clamp(30px,3vw,44px)!important;font-weight:700!important;text-transform:none!important;letter-spacing:0!important}
+/* Petites étiquettes */
+.fd-kick{font-family:var(--f);font-weight:700;letter-spacing:.14em}
+.mn>li>a{font-weight:600;letter-spacing:.04em}
+/* Palette : bleu marine, rouge, blanc, gris clair */
+.hq1{background:var(--navy)}
+.hq2{background:var(--navy);box-shadow:inset 1px 0 0 rgba(255,255,255,.18)}
+[dir="rtl"] .hq2{box-shadow:inset -1px 0 0 rgba(255,255,255,.18)}
+.tbar{background:var(--navy)!important}.tbar-tag{color:var(--navy)!important}
+.osr{background:#fff}
+.sb,.bw,.lgx{background:var(--bg2)}
+.cc{background:#fff}
+.gv-head{background:var(--navy)}
+.cc-stage{background:var(--bg2)}
+.ct2-im{background:#fff}
+.pk-stock{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.pk-stock::before{background:var(--red2)}
+/* Formes : angles droits partout */
+.slarr button,.sldots button,.sldots button[aria-current="true"],.sbtn,.pg-prev,.pg-next,.pg-count,.pk-stock,.ft2-soc a,.cc-ty,.sb-b,.tbar-tag,.bx-go,.btn,.pk-filters button,.pk-filters button span,.tbl,.ct2-im,.cc-sw,.gv-l,.ws-im figcaption{border-radius:0!important}
+.sldots button{width:22px;height:3px}
+.sldots button[aria-current="true"]{width:36px}
+.slring{display:none}
+.slarr button{background:rgba(10,25,60,.35)}
+/* Effets : sobres et identiques partout (pas de zoom d'image) */
+.ofi:hover img,.bx:hover img,.lgo:hover img,.abx-media:hover img,.mx-c:hover>img,.mx-c:focus-within>img,.sb-c:hover img,.gv-c:hover img,.ct2-c:hover .ct2-im img,.pk:hover .pk-im img{transform:none!important}
+.sb-c img,.gv-c img,.ct2-im img{transition:none}
+.abx-link:hover,.ws-link:hover,.sllink:hover,.tbar-a:hover{gap:12px}
+.abx-link:hover svg,.ws-link:hover svg,.sllink:hover svg{transform:none}
+[dir="rtl"] .abx-link:hover svg,[dir="rtl"] .ws-link:hover svg,[dir="rtl"] .sllink:hover svg{transform:scaleX(-1)}
+.sb-c::after,.gv-c::after,.pk::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 0 var(--navy);transition:box-shadow .2s;pointer-events:none}
+.sb-c:hover::after,.gv-c:hover::after{box-shadow:inset 0 0 0 3px var(--navy)}
+.cc-sw:hover{transform:none}
+html[lang="ar"] .ttl,html[lang="ar"] .sb-ttl,html[lang="ar"] .ct2-ttl,html[lang="ar"] .bw-ttl,html[lang="ar"] .osr-ttl,html[lang="ar"] .ws-ttl,html[lang="ar"] .cc-ttl,html[lang="ar"] .slbox .slt,html[lang="ar"] .wm,html[lang="ar"] .gv-ttl,html[lang="ar"] .pm-info h1,html[lang="ar"] .pname{font-family:"Tajawal",sans-serif!important;font-stretch:normal!important;font-variation-settings:normal!important}
+html[lang="ar"] .ttl,html[lang="ar"] .sb-ttl,html[lang="ar"] .ct2-ttl,html[lang="ar"] .bw-ttl,html[lang="ar"] .osr-ttl,html[lang="ar"] .cc-ttl{font-weight:400!important}
