@@ -845,8 +845,9 @@ html[lang="ar"] .bw-ttl{font-family:"Tajawal",sans-serif}
 .ct2-ttl b{font-weight:700}
 .lgx{background:#eef1f5}
 /* Barre d'information en haut du site */
-:root{--tb:40px}
-html.tb-off{--tb:0px}
+:root{--tb:0px}
+html.tb-on{--tb:40px}
+html.tb-on.tb-off{--tb:0px}
 .tbar{position:fixed;top:0;left:0;right:0;z-index:55;height:var(--tb);overflow:hidden;background:#5b80b8;color:#fff;border-bottom:1px solid rgba(255,255,255,.25)}
 html.tb-off .tbar{display:none}
 .tbar-in{position:relative;height:100%;display:flex;align-items:center;justify-content:center;padding:0 52px}
@@ -864,7 +865,7 @@ html.tb-off .tbar{display:none}
 main{padding-top:calc(100px + var(--tb))}
 .slider{max-height:calc(100vh - 100px - var(--tb))}
 @media(max-width:1100px){.slider{max-height:calc(100vh - 164px - var(--tb))}#menu{max-height:calc(100vh - 164px - var(--tb))}}
-@media(max-width:700px){:root{--tb:36px}html.tb-off{--tb:0px}.tbar-in{padding:0 40px 0 12px;justify-content:flex-start}[dir="rtl"] .tbar-in{padding:0 12px 0 40px}.tbar p{font-size:12.5px;gap:8px}.tbar-msg{min-width:0}.tbar-a{font-size:0;gap:0}.tbar-a svg{width:17px;height:17px}.tbar-tag{font-size:10px}}
+@media(max-width:700px){html.tb-on{--tb:36px}html.tb-on.tb-off{--tb:0px}.tbar-in{padding:0 40px 0 12px;justify-content:flex-start}[dir="rtl"] .tbar-in{padding:0 12px 0 40px}.tbar p{font-size:12.5px;gap:8px}.tbar-msg{min-width:0}.tbar-a{font-size:0;gap:0}.tbar-a svg{width:17px;height:17px}.tbar-tag{font-size:10px}}
 /* Sélecteur de langue en boutons accolés (façon Shadesign) */
 .langseg{display:flex;gap:0;border:1.5px solid var(--navy)}
 .langseg a{display:grid;place-items:center;width:44px;height:34px;padding:0;margin:0;border:0!important;border-radius:0;background:transparent;color:var(--navy);font-size:13px;font-weight:700;letter-spacing:.04em;opacity:1;transition:background .2s,color .2s}
