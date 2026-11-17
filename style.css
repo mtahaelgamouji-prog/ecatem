@@ -877,3 +877,27 @@ main{padding-top:calc(100px + var(--tb))}
 .langm .langs a+a{border-left:1.5px solid var(--navy)}
 [dir="rtl"] .langm .langs a+a{border-left:0;border-right:1.5px solid var(--navy)}
 .langm .langs a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* Langues façon SunSquare : codes discrets */
+.langmini{display:flex;align-items:center;gap:10px;border:0}
+.langmini a{display:inline;width:auto;height:auto;padding:4px 0;border:0!important;background:none!important;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#aab3c2;opacity:1;transition:color .2s}
+.langmini a:hover{color:var(--navy)}
+.langmini a.on{color:var(--navy)}
+.logo .logo-w{display:none}
+/* En-tête transparent sur le hero de l'accueil (ordinateur) */
+@media(min-width:1101px){
+ body.home main{padding-top:0}
+ body.home .slider{max-height:calc(100vh - var(--tb));height:900px}
+ body.home .slider::before{content:"";position:absolute;left:0;right:0;top:0;height:220px;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,35,.6),rgba(5,15,35,0))}
+ body.home .slider .slarr{z-index:3}
+ body.home .hd{transition:background .35s,box-shadow .35s}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within){background:transparent;box-shadow:none}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .mn>li>a,
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .sbtn{color:#fff}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .mn>li>a.on::before{background:#fff}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a{color:rgba(255,255,255,.55)}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .langmini a.on{color:#fff}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .logo img{display:none}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .logo .logo-w{display:block}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .hq{background:rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+ body.home .hd:not(.sc):not(:hover):not(:focus-within) .hq3{background:var(--red2)}
+}
