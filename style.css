@@ -847,11 +847,11 @@ html[lang="ar"] .bw-ttl{font-family:"Tajawal",sans-serif}
 /* Barre d'information en haut du site */
 :root{--tb:40px}
 html.tb-off{--tb:0px}
-.tbar{position:fixed;top:0;left:0;right:0;z-index:55;height:var(--tb);overflow:hidden;background:var(--red2);color:#fff;border-bottom:1px solid rgba(255,255,255,.25)}
+.tbar{position:fixed;top:0;left:0;right:0;z-index:55;height:var(--tb);overflow:hidden;background:#5b80b8;color:#fff;border-bottom:1px solid rgba(255,255,255,.25)}
 html.tb-off .tbar{display:none}
 .tbar-in{position:relative;height:100%;display:flex;align-items:center;justify-content:center;padding:0 52px}
 .tbar p{margin:0;display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden}
-.tbar-tag{flex:none;padding:3px 9px;border-radius:3px;background:#fff;color:var(--red2);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.tbar-tag{flex:none;padding:3px 9px;border-radius:3px;background:#fff;color:#5b80b8;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .tbar-msg{overflow:hidden;text-overflow:ellipsis}
 .tbar-a{flex:none;display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .tbar-a:hover{color:#fff;opacity:.85}
