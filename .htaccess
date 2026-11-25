@@ -1,0 +1,5 @@
+# ECATEM : adresse unique https://ecatem.com
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://ecatem.com%{REQUEST_URI} [L,R=301]
