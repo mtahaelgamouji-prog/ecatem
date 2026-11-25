@@ -23,9 +23,8 @@ main{flex:1;display:grid;place-items:center;padding:48px 20px 32px}
 h1{margin:0;font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:300;font-size:clamp(34px,6vw,60px);line-height:1.08}
 h1 b{font-weight:700}
 .dots{display:inline-flex;gap:.12em;margin-left:.06em;vertical-align:baseline}
-.dots i{display:inline-block;width:.18em;height:.18em;border-radius:50%;background:var(--red);animation:dot 1.4s infinite ease-in-out both}
-.dots i:nth-child(2){animation-delay:.18s}.dots i:nth-child(3){animation-delay:.36s}
-@keyframes dot{0%,80%,100%{transform:translateY(0) scale(.6);opacity:.35}40%{transform:translateY(-.32em) scale(1);opacity:1}}
+.dots i{display:inline-block;width:.18em;height:.18em;border-radius:50%;background:var(--red);animation:dot 1.2s infinite ease-in-out}
+@keyframes dot{0%,100%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-.3em) scale(.8);opacity:.6}}
 @media(prefers-reduced-motion:reduce){.dots i{animation:none;opacity:1;transform:none}}
 p{margin:0;font-size:17px;line-height:1.7;color:rgba(255,255,255,.88);max-width:620px}
 .ar{font-family:"Tajawal",sans-serif;direction:rtl;font-size:18px}
@@ -49,7 +48,7 @@ footer{text-align:center;padding:18px;font-size:12px;color:rgba(255,255,255,.55)
 <div class="box">
 <img class="logo" src="/img/logo-ecatem-white.png" alt="ECATEM" width="120" height="98">
 <span class="tag">Site en cours de construction</span>
-<h1>Notre nouveau site <b>arrive bientôt</b><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></h1>
+<h1>Notre nouveau site <b>arrive bientôt</b><span class="dots" aria-hidden="true"><i></i></span></h1>
 <p>Depuis 1993, ECATEM conçoit et fabrique des tentes dans ses usines de Témara et Tamesna, et propose stores, parasols et pergolas. En attendant l'ouverture du site, notre équipe reste à votre disposition.</p>
 <p class="ar">موقعنا الجديد قيد الإنشاء. فريقنا رهن إشارتكم عبر الهاتف.</p>
 <p class="en">Our new website is coming soon. Our team is available by phone.</p>
