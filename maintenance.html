@@ -25,6 +25,7 @@ h1 b{font-weight:700}
 .dots{display:inline-flex;gap:.12em;margin-left:.06em;vertical-align:baseline}
 .dots i{display:inline-block;width:.18em;height:.18em;border-radius:50%;background:var(--red);animation:dot 1.2s infinite ease-in-out}
 @keyframes dot{0%,100%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-.3em) scale(.8);opacity:.6}}
+@media(max-width:640px){.dots{margin-left:.1em}.dots i{width:.3em;height:.3em}}
 @media(prefers-reduced-motion:reduce){.dots i{animation:none;opacity:1;transform:none}}
 p{margin:0;font-size:17px;line-height:1.7;color:rgba(255,255,255,.88);max-width:620px}
 .ar{font-family:"Tajawal",sans-serif;direction:rtl;font-size:18px}
