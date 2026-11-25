@@ -38,6 +38,12 @@ p{margin:0;font-size:17px;line-height:1.7;color:rgba(255,255,255,.88);max-width:
 .info div{background:rgba(13,38,96,.6);padding:18px 14px;font-size:14px;line-height:1.55}
 .info b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
 .info a{color:#fff;text-decoration:none;direction:ltr;unicode-bidi:isolate}
+.cd{display:flex;gap:10px;justify-content:center;margin:4px 0 2px}
+.cd div{min-width:84px;padding:14px 8px 10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25)}
+.cd b{display:block;font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.cd span{display:block;margin-top:6px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cd-date{font-size:14px;color:rgba(255,255,255,.75);margin-top:-8px}
+@media(max-width:420px){.cd{gap:6px}.cd div{min-width:68px;padding:10px 4px 8px}}
 footer{text-align:center;padding:18px;font-size:12px;color:rgba(255,255,255,.55)}
 @media(max-width:640px){.info{grid-template-columns:1fr}p{font-size:16px}}
 </style>
@@ -49,6 +55,8 @@ footer{text-align:center;padding:18px;font-size:12px;color:rgba(255,255,255,.55)
 <img class="logo" src="/img/logo-ecatem-white.png" alt="ECATEM" width="120" height="98">
 <span class="tag">Site en cours de construction</span>
 <h1>Notre nouveau site <b>arrive bientôt</b><span class="dots" aria-hidden="true"><i></i></span></h1>
+<div class="cd" id="cd" role="timer" aria-label="Compte à rebours avant l'ouverture"><div><b id="cd-d">--</b><span>jours</span></div><div><b id="cd-h">--</b><span>heures</span></div><div><b id="cd-m">--</b><span>minutes</span></div><div><b id="cd-s">--</b><span>secondes</span></div></div>
+<p class="cd-date" id="cd-date">Ouverture le 30 novembre 2026</p>
 <p>Depuis 1993, ECATEM conçoit et fabrique des tentes dans ses usines de Témara et Tamesna, et propose stores, parasols et pergolas. En attendant l'ouverture du site, notre équipe reste à votre disposition.</p>
 <p class="ar">موقعنا الجديد قيد الإنشاء. فريقنا رهن إشارتكم عبر الهاتف.</p>
 <p class="en">Our new website is coming soon. Our team is available by phone.</p>
@@ -64,5 +72,13 @@ footer{text-align:center;padding:18px;font-size:12px;color:rgba(255,255,255,.55)
 </div>
 </main>
 <footer>© ECATEM 2026</footer>
+<script>
+(function(){var end=new Date('2026-11-30T00:00:00+01:00').getTime();
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){var t=end-Date.now();if(t<=0){document.getElementById('cd').style.display='none';document.getElementById('cd-date').textContent="Ouverture imminente : merci de votre patience !";return}
+var d=Math.floor(t/864e5),h=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4),s=Math.floor(t%6e4/1e3);
+document.getElementById('cd-d').textContent=pad(d);document.getElementById('cd-h').textContent=pad(h);document.getElementById('cd-m').textContent=pad(m);document.getElementById('cd-s').textContent=pad(s);setTimeout(tick,1000-Date.now()%1000)}
+tick()})();
+</script>
 </body>
 </html>
