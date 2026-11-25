@@ -3,3 +3,21 @@ RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://ecatem.com%{REQUEST_URI} [L,R=301]
+
+# --- MODE "SITE EN CONSTRUCTION" -------------------------------------
+# Les visiteurs voient maintenance.html.
+# Accès privé : https://ecatem.com/?apercu=79f737e183 (cookie valable 30 jours)
+# Pour ouvrir le site à tous : supprimer ce bloc jusqu'à "FIN".
+RewriteCond %{QUERY_STRING} (^|&)apercu=79f737e183(&|$)
+RewriteRule ^ %{REQUEST_URI}? [CO=ecatem_apercu:79f737e183:ecatem.com:43200:/:1:1,R=302,L]
+RewriteCond %{HTTP_COOKIE} !ecatem_apercu=79f737e183
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpe?g|webp|svg|gif|ico|woff2?|json)$ [NC]
+RewriteRule ^ /maintenance.html [L]
+# --- FIN -------------------------------------------------------------
+
+<IfModule mod_headers.c>
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache, must-revalidate"
+</FilesMatch>
+</IfModule>

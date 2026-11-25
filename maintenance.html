@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ECATEM – Site en cours de construction</title>
+<meta name="description" content="ECATEM, fabricant de tentes à Témara depuis 1993. Notre nouveau site arrive bientôt.">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14388a;--red:#e94b5b}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:"Open Sans","Segoe UI",Arial,sans-serif;color:#fff;background:#0d2660;display:flex;flex-direction:column;min-height:100vh}
+.bg{position:fixed;inset:0;background:url('/img/hero-tentes.jpg') center/cover no-repeat;z-index:-2}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,38,96,.82) 0%,rgba(13,38,96,.9) 55%,rgba(13,38,96,.97) 100%)}
+main{flex:1;display:grid;place-items:center;padding:48px 20px 32px}
+.box{width:min(760px,100%);text-align:center;display:grid;gap:26px;justify-items:center}
+.logo{width:120px;height:auto}
+.tag{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.45);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+h1{margin:0;font-stretch:75%;font-variation-settings:"wdth" 75;font-weight:300;font-size:clamp(34px,6vw,60px);line-height:1.08}
+h1 b{font-weight:700}
+h1 b::after{content:".";color:var(--red)}
+p{margin:0;font-size:17px;line-height:1.7;color:rgba(255,255,255,.88);max-width:620px}
+.ar{font-family:"Tajawal",sans-serif;direction:rtl;font-size:18px}
+.en{font-size:15px;color:rgba(255,255,255,.7)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-weight:700;font-size:15px;text-decoration:none;color:#fff;background:var(--red);border:1.5px solid var(--red)}
+.btn.ol{background:transparent;border-color:rgba(255,255,255,.6)}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:18px;height:18px}
+.info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;width:100%;margin-top:10px;background:rgba(255,255,255,.18)}
+.info div{background:rgba(13,38,96,.6);padding:18px 14px;font-size:14px;line-height:1.55}
+.info b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px}
+.info a{color:#fff;text-decoration:none;direction:ltr;unicode-bidi:isolate}
+footer{text-align:center;padding:18px;font-size:12px;color:rgba(255,255,255,.55)}
+@media(max-width:640px){.info{grid-template-columns:1fr}p{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main>
+<div class="box">
+<img class="logo" src="/img/logo-ecatem-white.png" alt="ECATEM" width="120" height="98">
+<span class="tag">Site en cours de construction</span>
+<h1>Notre nouveau site <b>arrive bientôt</b></h1>
+<p>Depuis 1993, ECATEM conçoit et fabrique des tentes dans ses usines de Témara et Tamesna, et propose stores, parasols et pergolas. En attendant l'ouverture du site, notre équipe reste à votre disposition.</p>
+<p class="ar">موقعنا الجديد قيد الإنشاء. فريقنا رهن إشارتكم عبر الهاتف.</p>
+<p class="en">Our new website is coming soon. Our team is available by phone.</p>
+<div class="cta">
+<a class="btn" href="tel:+212537602105"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>05 37 60 21 05</a>
+<a class="btn ol" href="https://www.google.com/maps/search/?api=1&amp;query=ECATEM%20Hay%20Attassnia%20Zone%20industrielle%20T%C3%A9mara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Nous trouver</a>
+</div>
+<div class="info">
+<div><b>Téléphone</b><a href="tel:+212537602105">05 37 60 21 05</a><br><a href="tel:+212537600209">05 37 60 02 09</a></div>
+<div><b>Adresse</b>N°26, Hay Attassnia<br>Zone industrielle, Témara</div>
+<div><b>Horaires</b>Lundi – vendredi, 8h30 – 18h00<br>Samedi, 8h30 – 12h00</div>
+</div>
+</div>
+</main>
+<footer>© ECATEM 2026</footer>
+</body>
+</html>
